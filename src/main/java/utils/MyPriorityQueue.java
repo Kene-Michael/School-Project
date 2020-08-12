@@ -7,8 +7,11 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.ListIterator;
 
+//An implementation of PriorityQueue class using a List.
 public class MyPriorityQueue {
     private ArrayList<BookOrder> queue = new ArrayList<BookOrder>();
+
+    //Boolean for different implementations of priority.
     private boolean mode;
 
     public MyPriorityQueue() {
@@ -19,10 +22,14 @@ public class MyPriorityQueue {
       this.mode = mode;
     }
 
-    public BookOrder poll() {
-        return queue.remove(0);
-    }
-
+    /**
+     * This method takes in a book order, checks if the list is empty and if it is, add the bookOrder to the list. If the
+     * list is not empty, it sorts the list based on priority with Teacher role coming first, Senior Student role second
+     * and Junior student role coming later when they all have a book order for the same book and else treats the list as
+     * first come first serve list.
+     * @param bookOrder
+     * @return
+     */
     public boolean offer(BookOrder bookOrder) {
         if(!mode) return queue.add(bookOrder);
         if (mode) {
@@ -48,21 +55,29 @@ public class MyPriorityQueue {
             }
             queue.add(bookOrder);
         }
-            System.out.println(queue);
             return true;
     }
+
+    /**
+     * This method removes the first element of the queue and returns it.
+     * @return
+     */
+    public BookOrder poll() {
+        return queue.remove(0);
+    }
+
+    /**
+     * This methods return the first element in the queue.
+     * @return
+     */
     public BookOrder peek() {
         return queue.get(0);
     }
 
-    public ListIterator<BookOrder> listIterator () {
-        return queue.listIterator();
-    }
-
-    public Iterator<BookOrder> iterator () {
-        return queue.iterator();
-    }
-
+    /**
+     * This method returns the length of the queue.
+     * @return
+     */
     public int size () {
         return queue.size();
     }

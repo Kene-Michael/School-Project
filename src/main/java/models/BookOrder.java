@@ -1,14 +1,17 @@
 package models;
 
 public class BookOrder {
+    //Fields
     private User user;
     private String bookId;
 
+    //Constructor
     public BookOrder(User user, String bookId) {
         this.user = user;
         this.bookId = bookId;
     }
 
+    //Getters and Setters.
     public User getUser() {
         return user;
     }
@@ -25,6 +28,7 @@ public class BookOrder {
         this.bookId = bookId;
     }
 
+    // Method overrides toString method.
     @Override
     public String toString() {
         return " user=" + user.getRole() +

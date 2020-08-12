@@ -37,9 +37,10 @@ public class LibraryUtils {
      * @param noOfPages
      * @param bookId
      */
-    public void createBook(String name, String author, String category, int noOfPages, String bookId) {
+    public Book createBook(String name, String author, String category, int noOfPages, String bookId) {
         Book book = new Book(name,author,category,noOfPages,bookId);
         addBook(book);
+        return book;
     }
 
     /**
@@ -48,7 +49,7 @@ public class LibraryUtils {
      * the number of books available.
      * @param book
      */
-    public void addBook(Book book) {
+    public Book addBook(Book book) {
         BookCatalogue bookCatalogue = library.getBooks().get(book.getBookId());
         if (bookCatalogue == null) {
             bookCatalogue = new BookCatalogue();
@@ -56,6 +57,7 @@ public class LibraryUtils {
             library.getBooks().put(book.getBookId(),bookCatalogue);
         }
         bookCatalogue.incrementAvailableBooks();
+        return book;
     }
 
     /**

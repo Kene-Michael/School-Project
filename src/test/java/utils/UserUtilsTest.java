@@ -1,5 +1,6 @@
 package utils;
 
+import models.Book;
 import models.Library;
 import models.User;
 import org.junit.jupiter.api.BeforeEach;
@@ -31,5 +32,11 @@ class UserUtilsTest {
 
     @Test
     void returnBook() {
+        Book book = decaLibraryUtils.createBook("Intro to Java","Daro","Java",465,"Java1");
+//        User obrien = new User("Obrien","Longe",Role.SENIOR_STUDENT);
+        userUtils.returnBook(book);
+        int expected = 2;
+        int actual = decaLibrary.getBooks().get(book.getBookId()).getAvailableBooks();
+        assertEquals(expected,actual);
     }
 }

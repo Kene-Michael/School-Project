@@ -5,16 +5,19 @@ import utils.Role;
 import java.util.HashSet;
 
 public class Person {
+    //Fields
     private String firstName;
     private String lastName;
     private Role role;
 
+    //Constructor
     public Person(String firstName, String lastName, Role role) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.role = role;
     }
 
+    //Getters and Setters.
     public String getFirstName() {
         return firstName;
     }

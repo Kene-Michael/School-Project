@@ -1,6 +1,7 @@
 package models;
 
 public class Book {
+    //Fields
     private Library library;
     private String name;
     private String author;
@@ -8,6 +9,7 @@ public class Book {
     private int noOfPages;
     private String bookId;
 
+    //Constructor
     public Book(String name, String author, String category, int noOfPages, String bookId) {
         this.name = name;
         this.author = author;
@@ -16,6 +18,7 @@ public class Book {
         this.bookId = bookId;
     }
 
+    //Getters and Setters.
     public String getName() {
         return name;
     }

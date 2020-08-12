@@ -1,10 +1,12 @@
 package models;
 
 public class BookCatalogue {
+    //Fields.
     private int totalNoOfBooks;
     private int availableBooks;
     private Book book;
 
+    //Getters and Setters.
     public int getTotalNoOfBooks() {
         return totalNoOfBooks;
     }
