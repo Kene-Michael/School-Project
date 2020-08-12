@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>models</OriginalElement>
+  <nodes>
+    <node x="10.0" y="700.0">models.BookOrder</node>
+    <node x="0.0" y="0.0">models.Person</node>
+    <node x="7.0" y="409.0">models.User</node>
+    <node x="195.78645833333331" y="978.0">models.Library</node>
+    <node x="286.1197916666667" y="256.0">models.Book</node>
+    <node x="235.0" y="666.0">models.BookCatalogue</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="models.Library" target="models.BookOrder">
+      <point x="-77.00000000000003" y="-81.0" />
+      <point x="272.78645833333326" y="948.0" />
+      <point x="163.75" y="948.0" />
+      <point x="51.25" y="92.0" />
+    </edge>
+    <edge source="models.Book" target="models.Library">
+      <point x="109.50000000000001" y="180.0" />
+      <point x="541.6197916666667" y="641.0" />
+      <point x="509.5" y="641.0" />
+      <point x="509.5" y="958.0" />
+      <point x="478.1197916666667" y="958.0" />
+      <point x="128.33333333333337" y="-81.0" />
+    </edge>
+    <edge source="models.User" target="models.Person">
+      <point x="52.75" y="-27.0" />
+      <point x="165.25" y="231.0" />
+      <point x="168.75" y="231.0" />
+      <point x="56.25" y="103.0" />
+    </edge>
+    <edge source="models.BookOrder" target="models.User">
+      <point x="51.25" y="-92.0" />
+      <point x="163.75" y="641.0" />
+      <point x="165.25" y="641.0" />
+      <point x="52.75" y="27.0" />
+    </edge>
+    <edge source="models.BookCatalogue" target="models.Book">
+      <point x="63.25" y="-126.0" />
+      <point x="424.75" y="641.0" />
+      <point x="395.6197916666667" y="641.0" />
+      <point x="-36.5" y="180.0" />
+    </edge>
+    <edge source="models.Library" target="models.BookCatalogue">
+      <point x="25.666666666666657" y="-81.0" />
+      <point x="375.453125" y="938.0" />
+      <point x="424.75" y="938.0" />
+      <point x="63.25" y="126.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.5020161290322581" x="190.0" y="733.9999999999999" />
+  <SelectedNodes>
+    <node>models.BookOrder</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
